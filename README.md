@@ -1,7 +1,5 @@
 # 🏋️ Gymora - Modern Fitness E-Commerce Platform
 
-![Gymora Banner](https://gymora-alpha.vercel.app/)
-
 ## 🚀 Live Demo
 
 **Website:** https://gymora-alpha.vercel.app/
@@ -13,6 +11,22 @@
 Gymora is a modern fitness-focused e-commerce platform built for gym enthusiasts and athletes. The application provides a complete online shopping experience for fitness products, accessories, and gym essentials through a sleek dark-themed user interface and powerful admin management system.
 
 The platform includes user authentication, product management, shopping cart functionality, order tracking, wishlist management, profile management, and a dedicated admin dashboard for complete store control.
+
+---
+## 📸 Screenshots
+
+### 🏠 Homepage
+
+![Homepage](https://raw.githubusercontent.com/krishnash648/Gymora/main/public/homepage.png)
+
+### 👤 User Dashboard
+
+![User Dashboard](https://raw.githubusercontent.com/krishnash648/Gymora/main/public/user-dashboard.png)
+
+### 🛠️ Admin Dashboard
+
+![Admin Dashboard](https://raw.githubusercontent.com/krishnash648/Gymora/main/public/admin-dashboard.png)
+---
 
 ---
 
