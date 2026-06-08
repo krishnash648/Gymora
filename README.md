@@ -208,7 +208,7 @@ Stores:
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/gymora.git
+git clone https://github.com/krishnash648/gymora.git
 ```
 
 ### Move Into Project
