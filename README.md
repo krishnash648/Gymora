@@ -8,11 +8,12 @@
 
 ## 📖 Overview
 
-Gymora is a modern fitness-focused e-commerce platform built for gym enthusiasts and athletes. The application provides a complete online shopping experience for fitness products, accessories, and gym essentials through a sleek dark-themed user interface and powerful admin management system.
+Gymora is a modern fitness-focused e-commerce platform built for gym enthusiasts, athletes, and fitness lovers. The platform delivers a complete online shopping experience for gym equipment, fitness accessories, supplements, and workout essentials through a sleek dark-themed user interface and a powerful admin management system.
 
-The platform includes user authentication, product management, shopping cart functionality, order tracking, wishlist management, profile management, and a dedicated admin dashboard for complete store control.
+The application includes secure authentication, product management, shopping cart functionality, wishlist management, order tracking, reviews & ratings, user profile management, AI-powered product assistance, and a dedicated admin dashboard for complete store control.
 
 ---
+
 ## 📸 Screenshots
 
 ### 🏠 Homepage
@@ -26,7 +27,6 @@ The platform includes user authentication, product management, shopping cart fun
 ### 🛠️ Admin Dashboard
 
 ![Admin Dashboard](https://raw.githubusercontent.com/krishnash648/Gymora/main/public/admin-dashboard.png)
----
 
 ---
 
@@ -34,44 +34,50 @@ The platform includes user authentication, product management, shopping cart fun
 
 ### 👤 User Features
 
-- Secure User Authentication
-- User Dashboard
-- Profile Management
-- Upload Profile Picture
-- Shopping Cart
-- Wishlist Management
-- Product Search
-- Product Reviews & Ratings
-- Order History
-- Order Tracking
-- Refund Requests
-- Recently Viewed Products
-- Address Management
-- Responsive Design
+* Secure User Authentication
+* User Dashboard
+* Profile Management
+* Profile Picture Upload
+* Address Management
+* Shopping Cart
+* Wishlist Management
+* Recently Viewed Products
+* Product Search
+* Product Reviews & Ratings
+* Order History
+* Order Tracking
+* Refund Requests
+* Responsive Design
 
 ### 🛒 Shopping Features
 
-- Product Catalog
-- Product Details Page
-- Product Categories
-- Product Search
-- Product Reviews
-- Wishlist System
-- Cart Management
-- Order Placement
-- Order Tracking
-- Rating System
+* Product Catalog
+* Product Categories
+* Product Details Page
+* Search Functionality
+* Cart Management
+* Wishlist System
+* Product Reviews
+* Product Rating System
+* Order Placement
+* Order Tracking
+
+### 🤖 AI Features
+
+* AI Product Chat Assistant
+* Product Recommendation Support
+* Interactive Product Queries
 
 ### 🛠️ Admin Features
 
-- Admin Dashboard
-- User Management
-- Product Management
-- Order Management
-- Message Management
-- Store Settings
-- Dashboard Analytics
-- Real-Time Data Updates
+* Admin Dashboard
+* User Management
+* Product Management
+* Order Management
+* Message Management
+* Store Settings
+* Dashboard Analytics
+* Real-Time Data Updates
 
 ---
 
@@ -79,69 +85,110 @@ The platform includes user authentication, product management, shopping cart fun
 
 ### Frontend
 
-- React.js
-- React Router DOM
-- React Icons
-- CSS3
-- Vite
+* React.js
+* React Router DOM
+* React Icons
+* CSS3
+* Vite
 
 ### Backend & Database
 
-- Firebase Authentication
-- Firebase Firestore
-- Firebase Storage
+* Firebase Authentication
+* Firebase Firestore
+* Firebase Storage
 
 ### Deployment
 
-- Vercel
+* Vercel
 
 ---
 
 ## 📂 Project Structure
 
 ```bash
-src/
+Gymora/
 │
-├── assets/
+├── public/
+│   ├── admin-dashboard.png
+│   ├── homepage.png
+│   ├── user-dashboard.png
+│   ├── favicon.svg
+│   └── icons.svg
 │
-├── components/
-│   ├── Navbar.jsx
-│   ├── Footer.jsx
-│   ├── ProtectedRoute.jsx
+├── src/
+│   │
+│   ├── assets/
+│   │   ├── cart.png
+│   │   ├── gym-logo.png
+│   │   ├── gym.png
+│   │   ├── logo.png
+│   │   └── react.svg
+│   │
+│   ├── components/
+│   │   ├── Categories.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── ProductCard.jsx
+│   │   ├── ProductChat.jsx
+│   │   ├── ProductDrawer.jsx
+│   │   └── Sidebar.jsx
+│   │
+│   ├── context/
+│   │   └── AuthContext.jsx
+│   │
+│   ├── hooks/
+│   │   └── useChat.jsx
+│   │
+│   ├── pages/
+│   │   ├── Account.jsx
+│   │   ├── AdminDashboard.jsx
+│   │   ├── Cart.jsx
+│   │   ├── Checkout.jsx
+│   │   ├── Login.jsx
+│   │   ├── Messages.jsx
+│   │   ├── Orders.jsx
+│   │   ├── Payments.jsx
+│   │   ├── Product.jsx
+│   │   ├── ProductDetails.jsx
+│   │   ├── Products.jsx
+│   │   ├── Profile.jsx
+│   │   ├── Register.jsx
+│   │   ├── Settings.jsx
+│   │   ├── UserDashboard.jsx
+│   │   ├── Users.jsx
+│   │   └── Wishlist.jsx
+│   │
+│   ├── routes/
+│   │   └── AdminRoute.jsx
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── crud.css
+│   ├── firebase-config.js
+│   ├── index.css
+│   └── main.jsx
 │
-├── context/
-│   ├── AuthContext.jsx
-│
-├── pages/
-│   ├── Home.jsx
-│   ├── Login.jsx
-│   ├── Signup.jsx
-│   ├── Cart.jsx
-│   ├── Wishlist.jsx
-│   ├── ProductDetails.jsx
-│   ├── UserDashboard.jsx
-│   ├── AdminDashboard.jsx
-│   ├── Users.jsx
-│   ├── Product.jsx
-│   ├── Orders.jsx
-│   ├── Messages.jsx
-│   └── Settings.jsx
-│
-├── firebase-config.js
-│
-├── App.jsx
-└── main.jsx
+├── .env
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+├── vercel.json
+└── README.md
 ```
+
+---
 
 ## 🔐 Authentication
 
 Gymora uses Firebase Authentication to provide:
 
-- Email & Password Authentication
-- Persistent Login Sessions
-- Role-Based Access Control
-- Protected Routes
-- Admin/User Authorization
+* Email & Password Authentication
+* Persistent Login Sessions
+* Protected Routes
+* Role-Based Access Control
+* Admin/User Authorization
 
 ---
 
@@ -149,25 +196,26 @@ Gymora uses Firebase Authentication to provide:
 
 ### Authentication
 
-User registration and login management.
+Handles user registration, login, and session management.
 
 ### Firestore Database
 
 Stores:
 
-- Users
-- Products
-- Orders
-- Reviews
-- Wishlist
-- Recently Viewed Products
+* Users
+* Products
+* Orders
+* Reviews
+* Wishlist Data
+* Recently Viewed Products
+* Messages
 
 ### Firebase Storage
 
 Stores:
 
-- Profile Images
-- Product Images
+* Profile Images
+* Product Images
 
 ---
 
@@ -175,45 +223,49 @@ Stores:
 
 ### Dashboard
 
-- Total Users
-- Total Products
-- Total Orders
+* Total Users
+* Total Products
+* Total Orders
+* Business Overview
 
 ### Users
 
-- View Users
-- Delete Users
+* View Users
+* Delete Users
+* Manage User Accounts
 
 ### Products
 
-- Add Products
-- Edit Products
-- Delete Products
+* Add Products
+* Edit Products
+* Delete Products
 
 ### Orders
 
-- Manage Customer Orders
-- Update Order Status
+* View Orders
+* Update Order Status
+* Manage Deliveries
 
 ### Messages
 
-- Manage Contact Requests
+* Manage Customer Queries
 
 ### Settings
 
-- Store Configuration
+* Store Configuration
 
 ---
 
 ## 🎨 UI Highlights
 
-- Modern Dark Theme
-- Neon Blue Accents
-- Responsive Layout
-- Interactive Dashboard
-- Smooth User Experience
-- Professional Admin Panel
-- Mobile Friendly Design
+* Modern Dark Theme
+* Neon Blue Accents
+* Responsive Layout
+* Professional Dashboard Design
+* Smooth User Experience
+* Interactive Product Cards
+* Mobile Friendly Design
+* Clean Navigation System
 
 ---
 
@@ -222,13 +274,13 @@ Stores:
 ### Clone Repository
 
 ```bash
-git clone https://github.com/krishnash648/gymora.git
+git clone https://github.com/krishnash648/Gymora.git
 ```
 
 ### Move Into Project
 
 ```bash
-cd gymora
+cd Gymora
 ```
 
 ### Install Dependencies
@@ -237,7 +289,7 @@ cd gymora
 npm install
 ```
 
-### Start Development Server
+### Run Development Server
 
 ```bash
 npm run dev
@@ -276,32 +328,16 @@ https://gymora-alpha.vercel.app/
 
 ## 📈 Future Improvements
 
-- Stripe Payments
-- Razorpay Integration
-- Coupon System
-- AI Product Recommendations
-- Multi-Vendor Support
-- Inventory Management
-- Email Notifications
-- Advanced Analytics
-- PWA Support
-
----
-
-## 👨‍💻 Developer
-
-Built by Krishna Sharma
-
-### Connect
-
-- GitHub: https://github.com/
-- LinkedIn: https://linkedin.com/
-
----
-
-## ⭐ Support
-
-If you like this project, give it a star on GitHub and share it with others.
+* Stripe Payment Integration
+* Razorpay Integration
+* Coupon & Discount System
+* AI Product Recommendations
+* Multi-Vendor Marketplace
+* Inventory Management
+* Email Notifications
+* Advanced Analytics
+* Progressive Web App (PWA)
+* Product Comparison Feature
 
 ---
 
@@ -315,25 +351,32 @@ If you like this project, give it a star on GitHub and share it with others.
 
 ---
 
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub.
+
+---
+
 ## ⭐ Final Note
 
 This project demonstrates:
 
-- Full-Stack Development with React & Firebase
-- Authentication & Authorization Systems
-- Real-Time Database Integration (Firestore)
-- Cloud Storage Management
-- E-Commerce Functionality
-- Shopping Cart & Wishlist Management
-- User & Admin Dashboards
-- Product Review & Rating System
-- Order Tracking & Management
-- Responsive UI/UX Design
-- State Management & Context API
-- Protected Routes & Role-Based Access Control
-- Production Deployment with Vercel
-- Real-World Debugging & Problem Solving
-- Firebase Security Rules Implementation
-- Scalable Frontend Architecture
+* Full-Stack Development with React & Firebase
+* Authentication & Authorization Systems
+* Real-Time Database Integration (Firestore)
+* Cloud Storage Management
+* E-Commerce Functionality
+* Shopping Cart & Wishlist Management
+* User & Admin Dashboards
+* Product Review & Rating System
+* Order Tracking & Management
+* AI Product Chat Integration
+* Responsive UI/UX Design
+* State Management with Context API
+* Protected Routes & Role-Based Access Control
+* Production Deployment with Vercel
+* Real-World Debugging & Problem Solving
+* Firebase Security Rules Implementation
+* Scalable Frontend Architecture
 
-This project was built to simulate a real-world fitness e-commerce platform and showcases modern web development practices, clean UI design, and production-ready application development.
+Gymora was built to simulate a real-world fitness e-commerce platform and showcases modern web development practices, clean UI design, scalable architecture, and production-ready application development.
