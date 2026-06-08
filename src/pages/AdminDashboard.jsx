@@ -9,11 +9,9 @@ import {
   FaBox,
   FaEnvelope,
   FaShoppingCart,
-  FaDollarSign,
   FaTachometerAlt,
   FaUserFriends,
   FaClipboardList,
-  FaCreditCard,
   FaCog,
   FaSignOutAlt,
 } from "react-icons/fa";
@@ -22,7 +20,6 @@ import {
 import Users from "./Users";
 import Product from "./Product";
 import Orders from "./Orders";
-import Payments from "./Payments";
 import Settings from "./Settings";
 import Messages from "./Messages";
 
@@ -36,7 +33,6 @@ function AdminDashboard() {
   const [users, setUsers] = useState([]);
   const [products, setProducts] = useState([]);
   const [orders, setOrders] = useState([]);
-  const [payments, setPayments] = useState([]);
 
   // getting firestore data
   const getData = (name, setData) => {
@@ -59,22 +55,13 @@ function AdminDashboard() {
     const usersData = getData("users", setUsers);
     const productsData = getData("products", setProducts);
     const ordersData = getData("orders", setOrders);
-    const paymentsData = getData("payments", setPayments);
 
     return () => {
       usersData();
       productsData();
       ordersData();
-      paymentsData();
     };
   }, []);
-
-  // revenue calculation
-  let totalRevenue = 0;
-
-  payments.forEach((item) => {
-    totalRevenue = totalRevenue + Number(item.amount || 0);
-  });
 
   // logout
   const handleLogout = () => {
@@ -145,19 +132,6 @@ function AdminDashboard() {
               <FaClipboardList />
 
               <span>Orders</span>
-            </div>
-
-            <div
-              className={`sidebar-item ${
-                activePage === "payments" ? "active" : ""
-              }`}
-              onClick={() => {
-                setActivePage("payments");
-              }}
-            >
-              <FaCreditCard />
-
-              <span>Payments</span>
             </div>
 
             <div
@@ -273,23 +247,7 @@ function AdminDashboard() {
                   <p>↑ 15% from last month</p>
                 </div>
               </div>
-
-              {/* Revenue */}
-              <div className="stat-card">
-                <div className="stat-icon orange">
-                  <FaDollarSign />
-                </div>
-
-                <div className="stat-text">
-                  <h4>Total Revenue</h4>
-
-                  <h1>₹{totalRevenue}</h1>
-
-                  <p>↑ 18% from last month</p>
-                </div>
-              </div>
             </div>
-
             {/* Table */}
             <div className="dashboard-card">
               <div className="users-header">
@@ -306,20 +264,14 @@ function AdminDashboard() {
                     <th>Total Products</th>
 
                     <th>Total Orders</th>
-
-                    <th>Total Revenue</th>
                   </tr>
                 </thead>
 
                 <tbody>
                   <tr>
                     <td>{users.length}</td>
-
                     <td>{products.length}</td>
-
                     <td>{orders.length}</td>
-
-                    <td>₹{totalRevenue}</td>
                   </tr>
                 </tbody>
               </table>
@@ -331,7 +283,6 @@ function AdminDashboard() {
         {activePage === "users" && <Users />}
         {activePage === "products" && <Product />}
         {activePage === "orders" && <Orders />}
-        {activePage === "payments" && <Payments />}
         {activePage === "messages" && <Messages />}
         {activePage === "settings" && <Settings />}
       </main>

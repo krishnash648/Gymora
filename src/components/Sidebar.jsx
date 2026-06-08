@@ -6,7 +6,6 @@ function Sidebar() {
       <Link to="/">Users</Link> | {""}
       <Link to="/">Products</Link> | {""}
       <Link to="/">Orders</Link> | {""}
-      <Link to="/">Payments</Link>
     </div>
   );
 }
