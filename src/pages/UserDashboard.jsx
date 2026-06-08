@@ -284,7 +284,7 @@ function UserDashboard() {
       </div>
 
       {/* MAIN */}
-      <div className="dashboard-main">
+      <div className="user-dashboard-main">
         {/* DASHBOARD */}
         {activeSection === "dashboard" && (
           <div className="profile-overview">
