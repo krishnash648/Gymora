@@ -633,6 +633,26 @@ a:hover {
   object-fit: cover;
 }
 
+.logout-sidebar-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ff4d6d, #e11d48) !important;
+  color: white !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logout-sidebar-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 28px rgba(255, 77, 109, 0.35);
+}
+
 .logout-btn {
   width: 100%;
   padding: 12px;
@@ -2478,14 +2498,17 @@ html {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 600;
 }
+
 .dashboard-sidebar {
   width: 260px;
-  min-height: 100vh;
+  height: 100vh;
   background: #02142a;
   padding: 40px 20px;
-  position: sticky;
+  position: fixed;
   top: 0;
-  align-self: flex-start;
+  left: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .dashboard-sidebar h2 {

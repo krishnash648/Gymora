@@ -15,8 +15,11 @@ import {
 } from "firebase/firestore";
 import { db, storage } from "../firebase-config";
 import { useAuth } from "../context/AuthContext";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase-config";
 import { useNavigate } from "react-router-dom";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaSignOutAlt } from "react-icons/fa";
 
 function UserDashboard() {
   const navigate = useNavigate();
@@ -45,6 +48,16 @@ function UserDashboard() {
   // REVIEW
   const [rating, setRating] = useState(5);
   const [comment, setComment] = useState("");
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+
+      navigate("/login");
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     if (!currentUser) return;
@@ -263,6 +276,10 @@ function UserDashboard() {
           onClick={() => setActiveSection("wishlist")}
         >
           Wishlist
+        </button>
+        <button className="logout-sidebar-btn" onClick={handleLogout}>
+          <FaSignOutAlt />
+          <span>Logout</span>
         </button>
       </div>
 
